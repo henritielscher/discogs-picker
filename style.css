@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-size: border-box;
+}
+
+html {
+  font-family: Consolas;
+}
+
+body {
+  background-color: snow;
+}
+
+.container {
+  margin: auto 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 36px;
+}
+
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  /* bottom: 50%; */
+  transform: translateY(-50%);
+  z-index: 10;
+  text-shadow: 2px 1px white;
+  font-size: 48px;
+  min-height: 48px;
+}
+
+#box {
+  position: relative;
+  color: orangered;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: linen;
+  text-align: center;
+}
+
+button {
+  color: white;
+  margin-top: 50px;
+  max-width: max-content;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: #202020;
+  font-family: Consolas;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid orangered;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  transition: transform 250ms ease-in-out;
+  pointer-events: all;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:disabled {
+  background-color: darkgrey;
+  pointer-events: none;
+  border: none;
+}
+
+img {
+  opacity: 0.4;
+  width: 150px;
+}
+
+.spinning-animation {
+  animation: spinning 2.5s infinite;
+}
+
+@keyframes spinning {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+}
